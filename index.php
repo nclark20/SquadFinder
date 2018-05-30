@@ -1,31 +1,33 @@
+<?php
+	session_start();
+	//$_SESSION["user"] = "";
+?>
 <html>
 	
 	<head>
-		<title>Squad Finder</title>
+		
 		<link type="text/css" rel="stylesheet" href="stylesheet.css">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<?php
-			$servername = "localhost";
-			$username = "root";
-			$password = "";
-
-			// Create connection
-			$conn = new mysqli($servername, $username, $password);
-
-			// Check connection
-			if ($conn->connect_error) {
-				die("Connection failed: " . $conn->connect_error);
-			} 
-			echo "Connected successfully";
-			
-				
-			
-			$conn->close();
+			include('connection.php');
+			include('header.php');
 		?>
 	</head>
 	
 	<body>
-		<p> E</p>
+		<?php
+			
+		?>
+		<form action="login.php" method="post">
+		  Username:<br>
+		  <input type="text" name="username">
+		  <br>
+		  Password:<br>
+		  <input type="password" name="password">
+		  <br><br>
+		  <input type="submit" value="Sign in">
+		  <input type="button" value="Register" onclick="window.location.href='register.php'" />
+		</form> 
 	</body
 
 	</html>
